@@ -1,0 +1,251 @@
+Request URL: https://blast.ncbi.nlm.nih.gov/Blast.cgi
+Request Method: POST
+Status Code: 200 
+Remote Address: 130.14.29.110:443
+Referrer Policy: origin-when-cross-origin
+access-control-allow-credentials: true
+access-control-allow-origin: https://blast.ncbi.nlm.nih.gov
+cache-control: private
+content-security-policy: upgrade-insecure-requests
+content-type: text/html
+date: Wed, 29 May 2019 20:25:44 GMT
+ncbi-phid: 5AAB3E50CEEEAC810000000000000001.m_1
+ncbi-sid: AD2A36D9CEEDE5C1_0000SID
+referrer-policy: origin-when-cross-origin
+server: Apache
+set-cookie: ncbi_sid=AD2A36D9CEEDE5C1_0000SID; domain=.nih.gov; path=/; expires=Fri, 29 May 2020 20:25:44 GMT
+status: 200
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+x-ua-compatible: IE=Edge
+x-xss-protection: 1; mode=block
+:authority: blast.ncbi.nlm.nih.gov
+:method: POST
+:path: /Blast.cgi
+:scheme: https
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+accept-encoding: gzip, deflate, br
+accept-language: pl-PL,pl;q=0.9,en-US;q=0.8,en;q=0.7
+cache-control: max-age=0
+content-length: 1018
+content-type: application/x-www-form-urlencoded
+cookie: ncbi_sid=AD2A36D9CEEDE5C1_0000SID; _ga=GA1.2.173945985.1559158372; _gid=GA1.2.1798584671.1559158372; BlastCubbyImported=passive; MyBlastUser=1bkoUYQoiBUUQPDoYMD05D1E92; _gat_ncbiSg=1; ncbi_pinger=N4IgDgTgpgbg+mAFgSwCYgFwgKwAYDCAnAMwBCAjAGz4CidhNATObq2+x+SADQgDGAG2R8A1gDsoADwAumUFyx8A9mOlRV3ZavXSAtAHcIAQzDdDJ7tICeYKLqM8QjTCADO0o9OGOALC4BGAkbuqLCIUAJgjoy4LnhEZFS09EwsHOlsXLzMLu6ewhgYgcHSoTDhkRgAcgDyVTSOxIQuxJSUjM28PrFYxAAc2ISUvn6KQqISMr7DWABmRgKuUL4A7C4+Ps5dfS0rw13NWI54LojS0mCuGAD012J8/sgAdADmyNKIAK7+T8hK18V3LpBEpPqhrmVriZnmcALYCY4KEDHZxYAAiSj4n1hOnyKmOoxAfUIXAAvrxPmIBEojKhJrIMKBUSBAbIugEgu4lkYIHxENEejgCIRcCsfNhkjRCCsKBk5VknEjWYVWdzeYhqnUGrx+i5GocQMRGCtyMQFd0Wh0+uKRi5KdTafSCXFWMcZoafArsGssLFeJQkcRcM1yfwlLDYSonYzDXreNg4yByD6QPNFstsszWU97o8cwJYTnkIhXkoYNEDeRGH0/YbBSxGH4dUiqzXGszCIQm4biC5pBBPhmPX2B0OfL3fU9G09azbfccJ0nq7FSaSgA=
+dnt: 1
+origin: https://blast.ncbi.nlm.nih.gov
+referer: https://blast.ncbi.nlm.nih.gov/Blast.cgi
+upgrade-insecure-requests: 1
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+CMD: Get
+ALIGNMENTS: 100
+ALIGNMENT_VIEW: Pairwise
+BLAST_PROGRAMS: blastp
+CDD_RID: EXUP5CXY014
+CDD_SEARCH: on
+CDD_SEARCH_STATE: 2
+CLIENT: web
+COMPOSITION_BASED_STATISTICS: 2
+CONFIG_DESCR: 2,3,4,5,6,7,8
+DATABASE: nr_v5
+DB_DISPLAY_NAME: nr
+DESCRIPTIONS: 100
+EQ_OP: AND
+EXPECT: 10
+FILTER: F
+FORMAT_NUM_ORG: 1
+FORMAT_OBJECT: Alignment
+FORMAT_TYPE: HTML
+FULL_DBNAME: nr_v5
+GAPCOSTS: 11 1
+GET_SEQUENCE: on
+HSP_RANGE_MAX: 0
+JOB_TITLE: query-1
+LAYOUT: OneWindow
+LINE_LENGTH: 60
+MASK_CHAR: 2
+MASK_COLOR: 1
+MATRIX_NAME: BLOSUM62
+MAX_NUM_SEQ: 100
+MYNCBI_USER: 10746754543
+NEW_VIEW: on
+NUM_DIFFS: 0
+NUM_OPTS_DIFFS: 0
+NUM_ORG: 1
+NUM_OVERVIEW: 100
+NUM_QUERIES: 3
+OLD_VIEW: false
+ORG_DBS: giless_dbvers5
+PAGE: Proteins
+PAGE_TYPE: BlastSearch
+PROGRAM: blastp
+QUERY_INDEX: 0
+QUERY_INFO:  s1 
+QUERY_LENGTH: 718
+REPEATS: 45518
+RID: EXUP5SS0015
+RTOE: 26
+SELECTED_PROG_TYPE: blastp
+SERVICE: plain
+SHORT_QUERY_ADJUST: on
+SHOW_LINKOUT: on
+SHOW_OVERVIEW: on
+USER_DEFAULT_MATRIX: 4
+USER_DEFAULT_PROG_TYPE: blastp
+USER_TYPE: 2
+USE_ENTREZ_TAX_QUERY: TRUE
+WORD_SIZE: 6
+db: protein
+stype: protein
+
+
+
+
+
+
+
+
+
+
+-------------
+
+REQUEUST
+
+Request URL: https://blast.ncbi.nlm.nih.gov/Blast.cgi
+Request Method: POST
+Status Code: 200 
+Remote Address: 130.14.29.110:443
+Referrer Policy: origin
+access-control-allow-credentials: true
+access-control-allow-origin: https://blast.ncbi.nlm.nih.gov
+cache-control: private
+content-security-policy: upgrade-insecure-requests
+content-type: text/html
+date: Wed, 29 May 2019 20:25:41 GMT
+ncbi-phid: 5AAB3557CEEEAC510000000000000001.m_1
+ncbi-sid: AD2A36D9CEEDE5C1_0000SID
+referrer-policy: origin-when-cross-origin
+server: Apache
+set-cookie: BlastCubbyImported=passive; domain=ncbi.nlm.nih.gov
+set-cookie: ncbi_sid=AD2A36D9CEEDE5C1_0000SID; domain=.nih.gov; path=/; expires=Fri, 29 May 2020 20:25:41 GMT
+status: 200
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+x-ua-compatible: IE=Edge
+x-xss-protection: 1; mode=block
+:authority: blast.ncbi.nlm.nih.gov
+:method: POST
+:path: /Blast.cgi
+:scheme: https
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+accept-encoding: gzip, deflate, br
+accept-language: pl-PL,pl;q=0.9,en-US;q=0.8,en;q=0.7
+cache-control: max-age=0
+content-length: 10003
+content-type: multipart/form-data; boundary=----WebKitFormBoundaryoKmXxBpsqo9ZFIu8
+cookie: ncbi_sid=AD2A36D9CEEDE5C1_0000SID; _ga=GA1.2.173945985.1559158372; _gid=GA1.2.1798584671.1559158372; BlastCubbyImported=passive; MyBlastUser=1bkoUYQoiBUUQPDoYMD05D1E92; _gat_ncbiSg=1; ncbi_pinger=N4IgDgTgpgbg+mAFgSwCYgFwgKwAYDCAnAMwBCAjAGz4CidhNATObq2+x+SADQgDGAG2R8A1gDsoADwAumUFyx8A9mOlRV3ZavXSAtAHcIAQzDdDJ7tICeYKLqM8QjTCADO0o9OGOALC4BGAkbuqLCIUAJgjoy4LnhEZFS09EwsHOlsXLzMLu6ewhgYgcHSoTDhkRgAcgDyVTSOxIQuxJSUjM28PrFYxAAc2ISUvn6KQqISMr7DWABmRgKuUL4A7C4+Ps5dfS0rw13NWI54LojS0mCuGAD012J8/sgAdADmyNKIAK7+T8hK18V3LpBEpPqhrmVriZnmcALYCY4KEDHZxYAAiSj4n1hOnyKmOoxAfUIXAAvrxPmIBEojKhJrIMKBUSBAbIugEgu4lkYIHxENEejgCIRcCsfNhkjRCCsKBk5VknEjWYVWdzeYhqnUGrx+i5GocQMRGCtyMQFd0Wh0+uKRi5KdTafSCXFWMcZoafArsGssLFeJQkcRcM1yfwlLDYSonYzDXreNg4yByD6QPNFstsszWU97o8cwJYTnkIhXkoYNEDeRGH0/YbBSxGH4dUiqzXGszCIQm4biC5pBBPhmPX2B0OfL3fU9G09azbfccJ0nq7FSaSgA=
+dnt: 1
+origin: https://blast.ncbi.nlm.nih.gov
+referer: https://blast.ncbi.nlm.nih.gov/
+upgrade-insecure-requests: 1
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+QUERY: >s1
+MHEIKYITIDEADVLLTEEHEETTRFICQSANRDRQISLFSATTSERLDNFFDKVESSQQ
+IEVVAGEAKMPTTIDHIYIQVNPRDKVKTLYRLAQVENMRAIVFVNTIGRLNTVYEKLNH
+DGVKISALHGDLSKLQRQESVRDFKKGETSLLLATDVAARGIDLPNLPAIIQFDMAQSLT
+QYVHRSGRTGRMGEQGAAISLVTDREARELKQMVKENDVKMIEQIVKFGHLIDPQKTK
+>s2
+MFDFDMLGLGPSLNSALERAGFKEPTPIQNQAIPLALDGHDILGLAQTGTGKTLAFGLPL
+IEHLLAAPGKPAPKTVKALILAPTRELVNQIADNLRPLTEGSKLRVATVVGGQSINRQIG
+VLARGTDVLVATPGRLIDLMDRGAVDLGQVRHLVLDEADQMLDLGFIHALRKIAPRLGTP
+RQTMLFSATMPKQMEELSRAYLNDPRRVQVSPPGKAADKVTQSVHFVAKADKPAKLREIL
+>s3
+MGVFKIHSKFKPKGDQPQAIDSISKGIEKGDRFQTLLGVTGSGKTFTMANIIQRIQKPTL
+VLAHNKTLAAQLCSEFKEFFPENSVEYFVSYYDYYQPEAYVPQTDTYIEKDASINDEIDK
+LRHSATSALLERKDVIVVASVSCIYGLGNPEEYKKLTISLRPGMIKDRDEIIKKLVEIQY
+ERNDINFVRGTFRVKGDTLDIFPASSTSHAIKVEFFGDEIDRIKEFDALTGETMGIRKHV
+db: protein
+QUERY_FROM: 
+QUERY_TO: 
+QUERYFILE: (binary)
+GENETIC_CODE: 1
+JOB_TITLE: query-1
+SUBJECTS: 
+stype: protein
+SUBJECTS_FROM: 
+SUBJECTS_TO: 
+SUBJECTFILE: (binary)
+DATABASE: nr_v5
+EQ_MENU: 
+NUM_ORG: 1
+EQ_TEXT: 
+BLAST_PROGRAMS: blastp
+PHI_PATTERN: 
+MAX_NUM_SEQ: 100
+SHORT_QUERY_ADJUST: on
+EXPECT: 10
+WORD_SIZE: 6
+HSP_RANGE_MAX: 0
+MATRIX_NAME: BLOSUM62
+MATCH_SCORES: 1,-2
+GAPCOSTS: 11 1
+COMPOSITION_BASED_STATISTICS: 2
+REPEATS: 45518
+TEMPLATE_LENGTH: 0
+TEMPLATE_TYPE: 0
+PSSM: (binary)
+I_THRESH: 
+DI_THRESH: 
+PSI_PSEUDOCOUNT: 
+SHOW_OVERVIEW: on
+SHOW_LINKOUT: on
+GET_SEQUENCE: on
+FORMAT_OBJECT: Alignment
+FORMAT_TYPE: HTML
+ALIGNMENT_VIEW: Pairwise
+MASK_CHAR: 2
+MASK_COLOR: 1
+DESCRIPTIONS: 100
+ALIGNMENTS: 100
+LINE_LENGTH: 60
+NEW_VIEW: on
+OLD_VIEW: false
+NCBI_GI: 
+SHOW_CDS_FEATURE: 
+NUM_OVERVIEW: 100
+FORMAT_EQ_TEXT: 
+FORMAT_ORGANISM: 
+EXPECT_LOW: 
+EXPECT_HIGH: 
+PERC_IDENT_LOW: 
+PERC_IDENT_HIGH: 
+QUERY_INDEX: 0
+FORMAT_NUM_ORG: 1
+CONFIG_DESCR: 2,3,4,5,6,7,8
+CLIENT: web
+SERVICE: plain
+CMD: request
+PAGE: Proteins
+PROGRAM: blastp
+MEGABLAST: 
+RUN_PSIBLAST: 
+WWW_BLAST_TYPE: 
+TWO_HITS: 
+CDD_SEARCH: on
+ID_FOR_PSSM: 
+DB_DISPLAY_NAME: nr
+ORG_DBS: giless_dbvers5
+SAVED_PSSM: 
+SELECTED_PROG_TYPE: blastp
+SAVED_SEARCH: 
+BLAST_SPEC: 
+MIXED_DATABASE: 
+QUERY_BELIEVE_DEFLINE: 
+DB_DIR_PREFIX: 
+USER_DATABASE: 
+USER_WORD_SIZE: 
+USER_MATCH_SCORES: 
+USER_FORMAT_DEFAULTS: 
+NO_COMMON: 
+NUM_DIFFS: 0
+NUM_OPTS_DIFFS: 0
+UNIQ_DEFAULTS_NAME: 
+PAGE_TYPE: BlastSearch
+USER_DEFAULT_PROG_TYPE: blastp
+USER_DEFAULT_MATRIX: 4
