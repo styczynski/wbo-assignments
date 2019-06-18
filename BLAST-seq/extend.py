@@ -45,7 +45,7 @@ def entrezRetrieveSequence(accessionIDs, tmp='.', entrezUrl='https://eutils.ncbi
         for record in SeqIO.parse(handle, "fasta"):
             ret.append(record)
         
-    return []
+    return ret
 
 # Create a function called "chunks" with two arguments, l and n:
 def chunks(l, n):

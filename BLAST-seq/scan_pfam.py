@@ -1,9 +1,11 @@
 import click
 import csv
-from scripts.logger import createLogger, setLoggerLevel, logInfo, logDebug
+import re
+from scripts.logger import createLogger, setLoggerLevel, logInfo, logError, logDebug
 from scripts.files import getFile
 from Bio import SeqIO
 import xml.etree.ElementTree as ET
+import xml
 import requests
 import asyncio
 from concurrent.futures import ThreadPoolExecutor
@@ -11,9 +13,9 @@ import urllib.parse
 
 DEFAULT_FILE_TMP_FOLDER = "./workdir"
 
-def makeHMMSearchRequest(seq, seqID=None, logger=None, hmmUrl="https://www.ebi.ac.uk/Tools/hmmer/search/hmmscan", queryParams={}, queryHeaders={}):
+def makeHMMScanRequest(seq, seqID=None, logger=None, hmmUrl="https://www.ebi.ac.uk/Tools/hmmer/search/hmmscan", queryParams={}, queryHeaders={}):
     if seqID:
-        logDebug(logger, "Doing HMMSearch on seqence \"{}\"...".format(seqID))
+        logDebug(logger, "Doing HMMScan on seqence \"{}\"...".format(seqID))
     
     defaultParams = {
         "hmmdb": (None, "pfam"),
@@ -31,14 +33,26 @@ def makeHMMSearchRequest(seq, seqID=None, logger=None, hmmUrl="https://www.ebi.a
     answerContent = answer.content.decode("utf-8")
     
     if seqID:
-        logDebug(logger, "Done HMMSearch on seqence \"{}\"".format(seqID))
+        logDebug(logger, "Done HMMScan on seqence \"{}\"".format(seqID))
     
+    # Replace invalid tags
+    if answerContent:
+        answerContent = re.sub(r'<\d+ H=.*\/>', '', answerContent)
+    
+    xmlTree = None 
+    try:
+        xmlTree = ET.fromstring(answerContent)
+    except:
+        logError(logger, "Failed HMMScan on sequence \"{}\" - Invalid response ".format(seqID))
+        logError(logger, "xml [{}]".format(answerContent))
+        raise Exception("XML Parse failed")
+        
     if seqID:
         return {
             "seqID": seqID,
-            "result": ET.fromstring(answerContent)
+            "result": xmlTree
         }
-    return ET.fromstring(answerContent)
+    return xmlTree
 
 #
 # MAIN CODE BLOCK
@@ -75,7 +89,7 @@ def main(logginglevel, input, tmp):
                     seqTasks.append(
                         loop.run_in_executor(
                             executor,
-                            makeHMMSearchRequest,
+                            makeHMMScanRequest,
                             *("> {}\n{}".format(record.id, str(record.seq)), record.id, logger)
                         )
                     )
