@@ -92,6 +92,10 @@ def main(logginglevel, input, tmp, idthreshold, evalue):
             
             hits = root.findall("./BlastOutput_iterations/Iteration/Iteration_hits/Hit")
             logInfo(logger, "Got {} hits for given query".format(len(hits)))
+            if len(hits) <= 0:
+                logInfo(logger, requestOut)
+                raise Exception('No hits found')
+            
             recordsOut = []
             recordCountOut = 0
             for hit in hits:

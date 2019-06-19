@@ -109,6 +109,8 @@ def main(logginglevel, input, tmp):
                                 domainToSeqMap[name] = []
                             domainToSeqMap[name].append(record.id)
                 
+            #logInfo(logger, str(seqToDomainMap))
+                
             logInfo(logger, "Searched in total {} sequences with {} returned unique domains".format(len(seqToDomainMap.keys()), len(domainToSeqMap.keys())))
             logInfo(logger, "Writing output to {}".format(file, fileOut))
             with open(fileOut, mode="w") as fileOutHandle:
@@ -117,7 +119,7 @@ def main(logginglevel, input, tmp):
                 fileOutWriter.writerow(headers)
                 for seqID, seqDomains in seqToDomainMap.items():
                     rowResults = [ seqID ]
-                    for domain in headers:
+                    for domain in headers[1:]:
                         isInDomains = 0
                         if domain in seqDomains:
                            isInDomains = 1
