@@ -56,7 +56,6 @@ def normalizeTables(tables, logger=None):
     return ret
     
 def customFisher(domainNames, tableA, tableB, logger=None):
-    
     totalA = 0
     totalB = 0
     domainIndex = 0
@@ -65,7 +64,6 @@ def customFisher(domainNames, tableA, tableB, logger=None):
             totalA = tableA[domainIndex]
             totalB = tableB[domainIndex]
         domainIndex = domainIndex + 1
-    
     domainIndex = 0
     domainPs = []
     for domain in domainNames:
@@ -74,17 +72,14 @@ def customFisher(domainNames, tableA, tableB, logger=None):
             K = totalA
             n = tableA[domainIndex] + tableB[domainIndex]
             x = tableA[domainIndex]
-            
             p = 0
             for i in range(x, N+1):
                 p = p + ( scipy.special.binom(K, i) * scipy.special.binom((N - K), (n - i)) ) / scipy.special.binom(N, n)
             domainPs.append(p)
-        
         domainIndex = domainIndex + 1
     return domainPs
     
 def scipyFisher(domainNames, tableA, tableB, logger=None):
-    
     totalA = 0
     totalB = 0
     domainIndex = 0
@@ -93,25 +88,44 @@ def scipyFisher(domainNames, tableA, tableB, logger=None):
             totalA = tableA[domainIndex]
             totalB = tableB[domainIndex]
         domainIndex = domainIndex + 1
-    
     domainIndex = 0
     domainPs = []
     for domain in domainNames:
-       
         if domain != '':
             presentA = tableA[domainIndex]
             presentB = tableB[domainIndex]
-            
-            logInfo(logger, "\n\nDomain {}\n".format(domain))
-            logInfo(logger, "  pA={}  pB={}  tA={}  tB={}\n\n".format(presentA, presentB, totalA, totalB))
-            
-            
             odds_ratio, p = scipy.stats.fisher_exact([[presentA, presentB], [totalA - presentA, totalB - presentB]], alternative='greater')
             domainPs.append(p)
-        
         domainIndex = domainIndex + 1
-        
     return domainPs
+
+def perDomainStats(domainNames, tableA, tableB, logger=None):
+    totalA = 0
+    totalB = 0
+    domainIndex = 0
+    for domain in domainNames:
+        if domain == '':
+            totalA = tableA[domainIndex]
+            totalB = tableB[domainIndex]
+        domainIndex = domainIndex + 1
+    domainIndex = 0
+    domainSt = []
+    for domain in domainNames:
+        if domain != '':
+            presentA = tableA[domainIndex]
+            presentB = tableB[domainIndex]
+            percA = 0
+            percB = 0
+            if totalA != 0:
+                percA = presentA/totalA*100
+            if totalB != 0:
+                percB = presentB/totalB*100
+            domainSt.append([
+                percA, percB
+            ])
+        domainIndex = domainIndex + 1
+    return domainSt
+
 #
 # MAIN CODE BLOCK
 #
@@ -146,11 +160,6 @@ def main(logginglevel, input, tmp):
     table = go.Table(
         header=dict(values=['Domain', 'Custom Fisher', 'SciPy Fisher']),
         cells=dict(values=resultsT)
-    )
-    
-    bars = go.Bar(
-            x=['giraffes', 'orangutans', 'monkeys'],
-            y=[20, 14, 23]
     )
 
     data = [table, bars] 
